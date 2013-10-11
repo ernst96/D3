@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+	html, body { margin: 0; padding: 0; border: 0; }
+	body { 
+	  width: 800px; margin: auto;
+	  font: 300 10px "Helvetica Neue";
+	}
+
+	svg text { font: 14px sans-serif; }
+	svg .caption { font: 18px sans-serif; }
+	svg .axes { stroke: #aaa; stroke-width: 0.5px; fill: none; }
+	svg .labels text { letter-spacing: 1px; fill: #444; font-size: 12px; }
+	svg .arcs {  stroke: #000; stroke-width: 0.5px; }
+	svg .arc .label {
+		fill: #666;
+		stroke: none;
+		font: 300 10px "Helvetica Neue";
+	}
+	svg .arctext text { font-size: 9px; }
+	svg #sunburst .arctext { fill: #44d; }
+	svg g.tickmarks>text { font-size: 10px; fill: #888;}
+
+</style>
+
+<div id="sunburst" style="width: 800px; height: 820px;"></div>
+
+<script src="/lib/D3/d3.v3.min.js"></script>
+
+<script>
+
+	var visWidth = 400,
+		arcWidth,
+		
+		colorScale = d3.scale.threshold()
+		    .domain([75, 80, 85, 90, 95])
+		    //.domain([5, 10, 15, 20, 25])
+		    .range(["#DA3E00", "#ED9E00", "#FAE600", "#C2F400", "#78E900", "#2DB200"]);
+
+		radiusScale = d3.scale.linear()
+			//.domain([0, 0.15])
+			.domain([0, 100000])
+			.range([80, visWidth - 20])
+			.clamp(!0),
+			
+		widthScale = d3.scale.linear()
+			.domain([0, 100])
+			.range([0,360])
+			.clamp(!0),
+		
+		arcOptions = {
+			inner : 80,
+			outer : outerRadius
+		};
+		
+		
+	
+	function color(d) {
+		return colorScale(d.percentage);
+	}
+	
+	function name(d){
+		return d.name;
+	}
+	
+	function outerRadius(d) {
+		return radiusScale(d.catalog);
+	}
+	
+	function widthScale(d) {
+		return widthScale(d.catalog);
+	}
+	
+	
+	/**
+	 * Construct an arc
+	 */
+	function makeArc(a) {		
+		
+		return d3.svg.arc()
+			.startAngle(function(b) {
+				return (b.w - arcWidth/2) * Math.PI / 180;
+			})
+			.endAngle(function(b) {
+				return (b.w + arcWidth/2) * Math.PI / 180;
+			})
+			.innerRadius(a.inner)
+			.outerRadius(function(b) {
+				return a.outer(b);
+			});
+	}
+
+	
+	/**
+	 * a... svg container
+	 * data... data
+	 * c... color scale
+	 * d... arc options
+	 */
+	function drawArcs(a, data, c, arcOpt) {
+		
+		var arcs = a.append("svg:g")
+			.attr("class", "arcs")
+			.selectAll(".arc")
+			.data(data);
+			
+		var arc = arcs.enter()
+			.append("g")
+				.attr("class", "arc")
+				.attr("transform", "translate(" + visWidth + "," + visWidth + ")");
+					
+		arc.append("svg:path")
+			.attr("d", makeArc(arcOpt))
+			.style("fill", c);
+
+	    arc.append("svg:text")
+	    	.attr("class", "label")
+	      .attr("dy", ".31em")
+	      .attr("text-anchor", function(d) { return d.w < 180 ? "start" : "end"; })
+	      .attr("transform", function(d) { return "rotate(" + (d.w < 180 ? d.w - 90 : d.w + 90) + ") translate(" + ( d.w < 180 ? outerRadius(d)+10 : -outerRadius(d)-10  ) + ",0)"; })
+	      .text( function(d){ return name(d); } );
+
+			
+					
+	}
+
+	function updateArcs(a, b, c, d) {
+		
+		a.select("g.arcs")
+			.selectAll("path")
+				.data(b)
+					.transition()
+						.duration(200)
+						.style("fill", c)
+						.attr("d", arc(d));
+						
+	}
+	
+	
+	function drawSunburst(data) {
+		
+		var d = 800,
+			e = 800,
+			f = Math.min(d, e) / 2,
+			g = 20,
+			h = 34,
+			
+			i = d3.select("#sunburst")
+				.append("svg:svg")
+					.attr("width", d + "px")
+					.attr("height", e + 30 + "px");			
+	
+		drawArcs(i, data, color, arcOptions);
+		
+		i.append("svg:text")
+			.text("My Sunburst")
+			.attr("class", "caption")
+			.attr("transform", "translate(" + d / 2 + "," + (e + 20) + ")");
+			
+	}
+
+	function updateVizualization(d) {
+		updateSunburst(d);
+	}
+	
+	function updateSunburst(a) {
+		
+		var c = d3.select(b).select("svg"),
+			d = rollupForMonths(a, selectedMonthControl.selected());
+			
+		updateArcs(c, d, color, arcOptions);
+	
+	}
+
+			
+	d3.json('territories.json', function(data) {		
+		
+		arcWidth = 360/data.length;
+		
+		data.forEach(function(d,i) {
+		    d.w = arcWidth*i+1;
+		});
+		
+		drawSunburst(data);
+	});
+
+
+</script>
