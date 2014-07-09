@@ -1,7 +1,6 @@
-D3
-==
+[D3.js](http://d3js.org/ "D3js.org") Experiments and Prototypes:
 
-Here are my [D3.js](http://d3js.org/ "D3js.org") experiments and prototypes: 
+
 
 ### [Sunburst Visualization](/sunburst)
 
