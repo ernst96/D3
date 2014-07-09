@@ -1,7 +1,9 @@
 
 ## Sunburst Visualization
 
-[The source](/sunburst)
+I created this as a proof of concept for Sony Music to show relative catalog size by territory 
+
+[Read more...](/sunburst)
 
 ![Sunburst](/sunburst/sunburst-sm.gif)
 
