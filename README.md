@@ -1,6 +1,3 @@
-[D3.js](http://d3js.org/ "D3js.org") Experiments and Prototypes
-
-
 
 ## Sunburst Visualization
 
