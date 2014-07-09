@@ -1,7 +1,7 @@
 D3
 ==
 
-Here are experiments with [D3.js](http://d3js.org/ "D3js.org")
+Here are my [D3.js](http://d3js.org/ "D3js.org") experiments and prototypes: 
 
 #### Sunburst Visualization
 
