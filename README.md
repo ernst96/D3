@@ -10,7 +10,7 @@ I created this as a proof of concept for Sony Music to show relative catalog siz
 
 ## Sony Music Distribution Partner Visualization
 
-This is a prototype developed for Sony Music to vizualize supply chain performance for distribution partners. 
+This is a prototype developed for Sony Music to visualize supply chain performance for distribution partners. 
 
 [Read more &#187;.](/partnerviz)
 
