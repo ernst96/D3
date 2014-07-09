@@ -1,8 +1,10 @@
-[D3.js](http://d3js.org/ "D3js.org") Experiments and Prototypes:
+[D3.js](http://d3js.org/ "D3js.org") Experiments and Prototypes
 
 
 
-## [Sunburst Visualization](/sunburst)
+## Sunburst Visualization
+
+[Look at the source](/sunburst)
 
 ![Sunburst](/sunburst/sunburst-sm.gif)
 
