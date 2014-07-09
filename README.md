@@ -3,12 +3,12 @@ D3
 
 Here are my [D3.js](http://d3js.org/ "D3js.org") experiments and prototypes: 
 
-#### Sunburst Visualization
+### Sunburst Visualization
 
 ![Sunburst](/sunburst/sunburst.gif)
 
 
-#### Sony Music Distribution Partner Visualization
+### Sony Music Distribution Partner Visualization
 
 ![Sunburst](/partnerviz/partnerviz.gif)
 
