@@ -5,7 +5,7 @@ This is a prototype developed in D3 for Sony Music to visualize supply chain per
 
 [Live Demo &#187;](http://ernst96.github.io/demo/partnerviz/)
 
-As you can see, poorly performing partners float to the top and are color coded in a green-to-red color scale to allow users to quikcly identify potential issues. 
+As you can see, poorly performing partners float to the top and are color coded in a green-to-red color scale to allow users to quickly identify potential issues. 
 
 Mousing over a partner displays additional detail.
 
