@@ -1,7 +1,7 @@
 
 ## Sunburst Visualization
 
-[Look at the source](/sunburst)
+[The source](/sunburst)
 
 ![Sunburst](/sunburst/sunburst-sm.gif)
 
