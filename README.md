@@ -3,7 +3,7 @@
 
 I created this as a proof of concept for Sony Music to show relative catalog size by territory 
 
-[Read more...](/sunburst)
+[Read more &#187;](/sunburst)
 
 ![Sunburst](/sunburst/sunburst-sm.gif)
 
@@ -12,7 +12,7 @@ I created this as a proof of concept for Sony Music to show relative catalog siz
 
 This is a prototype developed for Sony Music to vizualize supply chain performance for distribution partners. 
 
-[Read more...](/partnerviz)
+[Read more &#187;.](/partnerviz)
 
 ![Sunburst](/partnerviz/partnerviz-sm.gif)
 
