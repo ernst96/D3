@@ -5,8 +5,10 @@ Sony Music's digital supply chain manages the delivery of media assets and metad
 The team managing this process needed a real time and historic view into the performance of these systems with the primary
 objective of mitigating system downtime and identifying current and developing delivery activity issues.
 
-Distribution partner feeds are displayed with total package counts and packaging status visualized with time series bar charts.
-The past 60 minutes are shown to the right with rolled up hourly and 2 hour history to the left.
+- Total package counts and packaging status for distribution partners are visualized with time series bar charts.
+- The past 60 minutes are shown to the right with rolled up hourly and 2 hour history to the left. 
+- A mouse over on a bar displays the counts for that time stamp
+- In addition to package counts darker shaded bars show a 'stale' package count; stale packages have been in a particular status longer than a set threshold
 
 To test performance I added a slider control that allows you to increase the update interval.
 
