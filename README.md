@@ -1,5 +1,5 @@
 
-## Sony Music System Performance Time Series
+## Real Time and Historical System Performance Visualizing
 
 This is a prototype developed for Sony Music to visualize supply chain system performance.
 
