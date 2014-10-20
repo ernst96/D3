@@ -1,5 +1,5 @@
 
-## Real Time and Historical System Performance Visualizing
+## Real Time and Historical System Performance Visualization
 
 This is a prototype developed for Sony Music to visualize supply chain system performance.
 
