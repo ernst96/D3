@@ -101,7 +101,7 @@
 			
 			// dimensions
 			tcp = 12, // padding on top of totals chart (spacing for labels)
-			th = 55, // totals chart height
+			th = 50, // totals chart height
 			ch = 50, // chart height
 			bw = 6, // bar width
 			cp = bw, //  padding around and in between charts
@@ -116,7 +116,7 @@
 			config = [
 
 					{
-						feedNm: 'iTunes',
+						feedNm: 'Quorra',
 						dspId: 1,
 						statuses: [
 							{
@@ -137,19 +137,28 @@
 							}
 						]
 					}, {
-						feedNm: 'Amazon',
+						feedNm: 'Dillinger',
 						dspId: 2,
 						statuses: [
-							{
+                            {
+                                statusId: 1,
+                                statusNm: 'New'
+                            },{
+                                statusId: 2,
+                                statusNm: 'Converting'
+                            },{
+                                statusId: 3,
+                                statusNm: 'Packaging'
+                            }, {
+                                statusId: 4,
+                                statusNm: 'Packaged'
+                            }, {
+                                statusId: 5,
+                                statusNm: 'Enqueued'
+                            }, {
 								statusId: 7,
 								statusNm: 'Delivered'
-							}, {
-								statusId: 8,
-								statusNm: 'Failed'
-							}, {
-								statusId: 9,
-								statusNm: 'Notified'
-							}, {
+							},{
 								statusId: 8,
 								statusNm: 'Hold'
 							}, {
@@ -158,7 +167,7 @@
 							}
 						]
 					}, {
-						feedNm: 'YouTube',
+						feedNm: 'Zuse',
 						dspId: 3,
 						statuses: [
 							{
@@ -176,9 +185,42 @@
 							}, {
 								statusId: 7,
 								statusNm: 'Delivered'
-							}
+							}, {
+                                statusId: 8,
+                                statusNm: 'Hold'
+                            }, {
+                                statusId: 9,
+                                statusNm: 'Blocked'
+                            }
 						]
-					}
+					}, {
+                        feedNm: 'Shaddix',
+                        dspId: 4,
+                        statuses: [
+                            {
+                                statusId: 1,
+                                statusNm: 'New'
+                            }, {
+                                statusId: 2,
+                                statusNm: 'Converting'
+                            },{
+                                statusId: 3,
+                                statusNm: 'Packaging'
+                            }, {
+                                statusId: 4,
+                                statusNm: 'Packaged'
+                            }, {
+                                statusId: 5,
+                                statusNm: 'Enqueued'
+                            }, {
+                                statusId: 6,
+                                statusNm: 'Delivering'
+                            }, {
+                                statusId: 7,
+                                statusNm: 'Delivered'
+                            }
+                        ]
+                    }
 			],
 
 			// x-scale

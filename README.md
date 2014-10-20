@@ -1,4 +1,13 @@
 
+## Sony Music System Performance Time Series
+
+This is a prototype developed for Sony Music to visualize supply chain system performance.
+
+[Read more &#187;.](/timeseries)
+
+![Timeseries](/timeseries/timeseries-sm.gif)
+
+
 ## Sony Music Distribution Partner Visualization
 
 This is a prototype developed for Sony Music to visualize supply chain performance for distribution partners. 
