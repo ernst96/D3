@@ -10,7 +10,7 @@ objective of mitigating system downtime and identifying current and developing d
 - A mouse over on a bar displays the counts for the selected point in time
 - In addition to package counts darker shaded bars show a 'stale' package count; stale packages have been in a particular status longer than a set threshold
 
-To test performance I added a slider control that allows you to increase the update interval.
+For this demo I added ui controls that allow you to change the update speed, the bar width and the sample count.
 
 
 [See Live Demo &#187;](http://ernst96.github.io/demo/timeseries/)
