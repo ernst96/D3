@@ -45,10 +45,12 @@ var refreshTime = 2500, // ms to fire refresh
 
 // count bar color scale
     cColorScale = d3.scale.threshold()
+        .domain([50, 75])
         .range(["#7ED321", "#F5C323", "#DA581C"]),
 
 // stale bar color scale
     sColorScale = d3.scale.threshold()
+        .domain([50, 75])
         .range(["#528314", "#B4811B", "#A7411E"]),
 
 // date stamp formatter
@@ -534,10 +536,6 @@ function drawStatus(statusData) {
         return d.count;
     })]);
 
-    // calibrate the count and stale color scale domains
-    // TODO this needs to be calibrated based on the confuration from each status
-    cColorScale.domain([50, 75]);
-    sColorScale.domain([50, 75]);
 
     // add count bars for each value
     statusGrp.selectAll(".c-bar")
