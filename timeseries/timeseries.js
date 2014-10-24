@@ -975,7 +975,7 @@ $(function () {
     });
 
     $("#bar-width-spinner").spinner({
-        min: 2,
+        min: 4,
         max: 16,
         step: 2,
         numberFormat: "C",
@@ -992,7 +992,7 @@ $(function () {
     });
 
     $(".count-spinner").spinner({
-        step: 2,
+        step: 5,
         min: 20,
         max: 150
     });
