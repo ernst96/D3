@@ -1,4 +1,4 @@
-Real Time and Historical System Performance Visualization
+Visualizing System Performance 
 ===========
 
 Sony Music's digital supply chain manages the delivery of media assets and metadata to the company's distribution partners.
