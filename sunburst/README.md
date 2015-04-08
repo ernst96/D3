@@ -1,7 +1,7 @@
-D3 Sunburst
+Radial Barchart
 ===========
 
-Inspired by the [windrose](http://windhistory.com/station.html?KSFO) featured on D3js.org, this is a sunburst that shows relative volume by the length of each burst. Color indicates a second dimension and each burst has a label that is positioned on the outside.
+Radial barchart inspired by the [windrose](http://windhistory.com/station.html?KSFO) featured on D3js.org. Color indicates a secondary metric and labels are positioned at the outer end of each bar.
 
 [See Live Demo &#187;](http://ernst96.github.io/demo/sunburst/)
 
