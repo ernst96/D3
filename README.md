@@ -1,7 +1,7 @@
 
 ## Visualizing System Performance
 
-This is a prototype developed for a major music company to visualize supply chain system performance.
+This is a prototype developed for a major entertainment company visualizing supply chain performance.
 
 [Read more &#187;.](/timeseries)
 
@@ -10,16 +10,16 @@ This is a prototype developed for a major music company to visualize supply chai
 
 ## Scatter Plot +
 
-This is a prototype developed for a major entertainment company to visualize supply chain performance for distribution partners. 
+Another visualization showing supply chain performance for distribution partners. 
 
 [Read more &#187;.](/partnerviz)
 
 ![Sunburst](/partnerviz/partnerviz-sm.png)
 
 
-## Sunburst Visualization
+## Radial Barchart
 
-I created this as a proof of concept for a major music company to show relative catalog size by territory 
+Proof of concept showing relative catalog size by territory.
 
 [Read more &#187;](/sunburst)
 
