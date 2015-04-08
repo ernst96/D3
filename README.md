@@ -14,7 +14,7 @@ This is a prototype developed for a major music company to visualize supply chai
 
 [Read more &#187;.](/partnerviz)
 
-![Sunburst](/partnerviz/partnerviz-sm.gif)
+![Sunburst](/partnerviz/partnerviz-sm.png)
 
 
 ## Sunburst Visualization
