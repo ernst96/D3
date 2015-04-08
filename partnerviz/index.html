@@ -141,7 +141,11 @@
 	function getY(d) { return -1*d.cmp; }	
 	function getR(d) { return d.cat/10000; }
 	function getC(d) { return d.t !== 0 ? d.mis : -1; }
-	function getShortNm(d) { return d.aid.substring(0, getR(d)/4); }
+	function getShortNm(d) { 
+		var str = ''; 
+		if(d.aid) { str = d.aid.substring(0, getR(d)/4);} 
+		return str;
+	}
 	function getFullNm(d) { return d.aid; }
 	function getId(d) { return d.aid; }
 	function order(a,b) { return getR(b) - getR(a); }
@@ -398,23 +402,23 @@
   		content = 	'<span class="title">' + getFullNm(d) + '</span>'+
   						'<table>'+
 	  						'<tr>'+
-	  							'<td class="label">Products In Catalog:</td>'+
+	  							'<td class="label">Catalog:</td>'+
 	  							'<td>' + fmt(d.cat) + '</td>'+
 	  						'</tr>'+
 	  						'<tr>'+
-	  							'<td class="label">Sales(Units):</td>'+
-	  							'<td>' + fmt(d.sales) + '</td>'+
+	  							'<td class="label">Global:</td>'+
+	  							'<td>' + fmt(d.s) + '</td>'+
 	  						'</tr>'+
 	  						'<tr>'+
-	  							'<td class="label">Missed SLA:</td>'+
+	  							'<td class="label">Missed:</td>'+
 	  							'<td>' + fmt(d.mis) + '</td>'+
 	  						'</tr>'+
 	  						'<tr>'+
-	  							'<td class="label">SLA Compliance(%):</td>'+
+	  							'<td class="label">Compliance(%):</td>'+
 	  							'<td>' + fmt(d.cmp) + '</td>'+
 	  						'</tr>'+
 	  						'<tr>'+
-	  							'<td class="label">Total Delivered:</td>'+
+	  							'<td class="label">Delivered:</td>'+
 	  							'<td>' + fmt(d.t) + '</td>'+
 	  						'</tr>'+
   						'</table>';
