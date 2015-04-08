@@ -1,6 +1,6 @@
 Visualizing System Performance 
 ===========
-This is a prototype developed for a major music company to visualize supply chain system performance, more specifically 
+This is a prototype developed for a major entertainment company to visualize supply chain system performance, more specifically 
 the delivery of media assets and metadata to the company's digital distribution partners.
 The team managing this process needed a real time and historic view into the performance of these systems with the primary
 objective of mitigating system downtime and identifying current and developing delivery activity issues.
