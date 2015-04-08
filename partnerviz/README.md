@@ -14,4 +14,4 @@ A user can quickly find a particular partner by entering an ID in the search. Mo
 [See Live Demo &#187;](http://ernst96.github.io/demo/partnerviz/)
 
 
-![Visualization](/partnerviz/partnerviz.gif)
+![Visualization](/partnerviz/partnerviz.png)
