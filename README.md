@@ -8,9 +8,9 @@ This is a prototype developed for a major music company to visualize supply chai
 ![Timeseries](/timeseries/timeseries-sm.gif)
 
 
-## Sony Music Distribution Partner Visualization
+## Scatter Plot +
 
-This is a prototype developed for a major music company to visualize supply chain performance for distribution partners. 
+This is a prototype developed for a major entertainment company to visualize supply chain performance for distribution partners. 
 
 [Read more &#187;.](/partnerviz)
 
