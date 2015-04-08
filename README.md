@@ -1,7 +1,7 @@
 
-## Real Time and Historical System Performance Visualization
+## Visualizing System Performance
 
-This is a prototype developed for Sony Music to visualize supply chain system performance.
+This is a prototype developed for a major music company to visualize supply chain system performance.
 
 [Read more &#187;.](/timeseries)
 
@@ -10,7 +10,7 @@ This is a prototype developed for Sony Music to visualize supply chain system pe
 
 ## Sony Music Distribution Partner Visualization
 
-This is a prototype developed for Sony Music to visualize supply chain performance for distribution partners. 
+This is a prototype developed for a major music company to visualize supply chain performance for distribution partners. 
 
 [Read more &#187;.](/partnerviz)
 
@@ -19,7 +19,7 @@ This is a prototype developed for Sony Music to visualize supply chain performan
 
 ## Sunburst Visualization
 
-I created this as a proof of concept for Sony Music to show relative catalog size by territory 
+I created this as a proof of concept for a major music company to show relative catalog size by territory 
 
 [Read more &#187;](/sunburst)
 
