@@ -112,7 +112,7 @@
 			</div>
 				  
 			<div class=".col-xs-4 input-group">
-				<input id="search-input" type="text" class="form-control" placeholder="Search by DspId (i.e. ITN)">
+				<input id="search-input" type="text" class="form-control" placeholder="Search by Id (i.e. ITN)">
 				<span class="input-group-btn">
 					<button id="search-btn" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
 				</span>			  	
@@ -137,12 +137,12 @@
 	/**
 	 * Data Utilities
 	 */
-	function getX(d) { return d.sales; }
+	function getX(d) { return d.s; }
 	function getY(d) { return -1*d.cmp; }	
 	function getR(d) { return d.cat/10000; }
 	function getC(d) { return d.t !== 0 ? d.mis : -1; }
-	function getShortNm(d) { return d.nm.substring(0, getR(d)/4); }
-	function getFullNm(d) { return d.nm; }
+	function getShortNm(d) { return d.aid.substring(0, getR(d)/4); }
+	function getFullNm(d) { return d.aid; }
 	function getId(d) { return d.aid; }
 	function order(a,b) { return getR(b) - getR(a); }
 
@@ -215,7 +215,7 @@
 				.attr("text-anchor", "end")
 				.attr("x", (v.width - margin.l - margin.r - 6))
 				.attr("y", -6)
-				.text("Sales USD");
+				.text("Global");
 	
 		// Add the y-axis and label objects.
 		v.svg.append("g")
@@ -227,7 +227,7 @@
 				.attr("y", 6)
 				.attr("dy", ".75em")
 				.attr("transform", "rotate(-90)")
-				.text("SLA Compliance %");
+				.text("Compliance %");
 		
 		// load the intial dataset	
 		loadData('data/one.json');
