@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<style>
+	html,
+	body {
+		font-family: "Roboto", sans-serif;
+		font-size: 8px;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.header {
+		padding: 30px 65px 30px 50px;
+	}
+
+	#visualization {
+		overflow: hidden;
+	}
+
+	.axis path,
+	.axis line {
+		fill: none;
+		stroke: #DDD;
+		shape-rendering: crispEdges;
+	}
+
+	.axis text {
+		fill: #333;
+	}
+
+	.label {
+		font-size: 10px;
+	}
+
+	.faded .partner .bubble,
+	.faded .partner text {
+		opacity: 0.1;
+	}
+
+	.partner .bubble {
+		opacity: .3;
+		stroke: #FFF;
+		stroke-width: 1;
+	}
+
+	.partner .mask {
+		opacity: 0;
+		fill: #FFF;
+	}
+
+	.highlight .bubble,
+	.faded .highlight .bubble {
+		opacity: .8;
+		stroke-width: 3;
+	}
+
+	.faded .highlight text {
+		opacity: .8;
+	}
+
+
+	.tooltip {
+		background-color: white;
+		border: 1px solid #BBBBBB;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+		color: black;
+		font-size: 11px;
+		/*max-width: 200px;*/
+		padding: 10px;
+		position: absolute;
+		z-index: 10;
+		opacity: 0;
+	}
+
+	.tooltip span.title {
+		font-size: 15px;
+		font-weight: bold;
+	}
+
+	.tooltip .label td,
+	.tooltip td.label {
+		color: #999;
+		text-align: right;
+		font-weight: normal;
+	}
+
+	text {
+		fill: #333;
+	}
+</style>
+
+<body>
+
+	<div id="header-wrapper">
+
+		<div class="header container-fluid">
+
+			<div class="row">
+
+				<div class="col-xs-8 btn-group" data-toggle="buttons">
+					<label class="btn btn-default data-btn active"><input type="radio" name="options"
+							value='data/one.json' checked>1</label>
+					<label class="btn btn-default data-btn "><input type="radio" name="options"
+							value='data/two.json'>2</label>
+					<label class="btn btn-default data-btn "><input type="radio" name="options"
+							value='data/three.json'>3</label>
+				</div>
+
+				<div class=".col-xs-4 input-group">
+					<input id="search-input" type="text" class="form-control" placeholder="Search by Id (i.e. ITN)">
+					<span class="input-group-btn">
+						<button id="search-btn" class="btn btn-default" type="button"><span
+								class="glyphicon glyphicon-search"></span></button>
+					</span>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id='visualization'> </div>
+
+	<!-- libs -->
+	<script src="http://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="scatterplot.js"></script>
+
+</body>
