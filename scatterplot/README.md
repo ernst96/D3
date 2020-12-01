@@ -11,7 +11,7 @@ For the demo I included static data sets that can be loaded with the buttons on 
 
 A user can quickly find a particular partner by entering an ID in the search. Moving the mouse over the visualization will reset the search and restore the display of all partners.
 
-[See Live Demo &#187;](http://ernst96.github.io/demo/partnerviz/)
+[See Live Demo &#187;](http://ernst96.github.io/demo/scatterplot/)
 
 
 ![Visualization](/partnerviz/partnerviz.png)
