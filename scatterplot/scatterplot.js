@@ -5,7 +5,7 @@ function getX(d) {
   return d.s;
 }
 function getY(d) {
-  return -1 * d.cmp;
+  return d.cmp;
 }
 function getR(d) {
   return d.cat / 10000;
@@ -69,10 +69,7 @@ var scale = {
 };
 
 var viz = {
-  // dimensions
-  width: getSize().width,
-  height: getSize().height - margin.t - margin.b,
-  chartData: null,
+  data: null,
   // axis
   xAxis: d3.axisBottom().scale(scale.x).tickFormat(d3.format(",d")),
   yAxis: d3.axisLeft().scale(scale.y),
@@ -97,6 +94,7 @@ var viz = {
  * Initialize the visualization
  */
 function initViz() {
+  
   // Create x-axis and label objects.
   viz.svg
     .append("g")
@@ -104,7 +102,6 @@ function initViz() {
     .append("text")
     .attr("class", "x label")
     .attr("text-anchor", "end")
-    .attr("x", viz.width - margin.l - margin.r - 6)
     .attr("y", -6)
     .text("Global");
 
@@ -129,16 +126,14 @@ function initViz() {
  * Draw the visualization
  */
 function drawViz() {
-  var w = getSize().width - margin.t - margin.b;
+  var w = getSize().width - margin.l - margin.r;
   var h = getSize().height - margin.t - margin.b;
-  var vw = w + margin.l + margin.r;
-  var vh = h + margin.t + margin.b;
   var t = viz.svg.transition().duration(1500).ease(d3.easeExpOut);
   var partners;
   var p;
 
   // do nothing if there is no data
-  if (!viz.chartData) {
+  if (!viz.data) {
     return;
   }
 
@@ -158,7 +153,7 @@ function drawViz() {
 
   t.select(".y.axis").call(viz.yAxis);
 
-  partners = viz.svg.selectAll(".partner").data(viz.chartData, function (d) {
+  partners = viz.svg.selectAll(".partner").data(viz.data, function (d) {
     return getId(d);
   });
 
@@ -244,9 +239,9 @@ function drawViz() {
  */
 function loadData(dataUrl) {
   d3.json(dataUrl).then(function (data) {
-    viz.chartData = data;
+    viz.data = data;
 
-    viz.chartData.sort(order);
+    viz.data.sort(order);
 
     // calibrate the scale to ranges of data (sales and sla compliance)
     scale.x
