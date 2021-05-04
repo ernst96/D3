@@ -173,6 +173,9 @@ function drawViz() {
     .on("mouseover", showTooltip)
     .on("mousemove", positionTooltip)
     .on("mouseout", hideTooltip)
+    .on("click", function (d) {
+      debugger;
+    })
     .call(position);
 
   // add a visible bubble
